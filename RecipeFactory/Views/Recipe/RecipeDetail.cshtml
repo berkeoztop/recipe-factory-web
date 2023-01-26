@@ -1,0 +1,39 @@
+﻿@using RecipeFactoryWeb.Models
+@model IEnumerable<RecipeFactoryWeb.Models.Recipe>
+
+@{
+    ViewData["Title"] = "RecipeDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+	var item = Model.FirstOrDefault();
+}
+
+<div class="card text-white w-100 border-0">
+	<img src="https://loremflickr.com/940/300/pasta,rice?random=1" class="card-img" alt="...">
+	<div class="card-img-overlay">
+		<h1 class="card-title align-text-bottom">@item.Name</h1>
+	</div>
+</div>
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-4">
+			<h5 class="ps-3">Ingredients</h5>
+			<ul class="list-group list-group-flush w-25 border-0">
+				<li class="list-group-item text-center">@item.Ingredients</li>
+			</ul>
+		</div>
+		<div class="col-8">
+			<h5>Instructions</h5>
+			<ol class="list-group list-group-numbered">
+				<li class="list-group-item">@item.Instructions</li>
+			</ol>
+			<h5 class="pt-5">Nutrient Facts</h5>
+			<ol>
+				<li>@item.Nutritions</li>
+			</ol>
+		</div>
+	</div>
+</div>

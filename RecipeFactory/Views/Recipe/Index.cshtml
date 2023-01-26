@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RecipeFactoryWeb.Models.Recipe>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-end">
+	<a class="btn btn-primary " asp-controller="Recipe" asp-action="Create">Create Recipe</a>
+</div>
+
+<table class="table table-borderless table-striped">
+	<thead>
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Ingredients
+		</th>
+		<th>
+			Instructions
+		</th>
+		<th>
+			Type
+		</th>
+		<th>
+			Nutritions
+		</th>
+		<th>
+			Image
+		</th>
+		<th>
+			Btn
+		</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@item.Name
+			</td>
+			<td>
+				@item.Ingredients
+			</td>
+			<td>
+				@item.Instructions
+			</td>
+			<td>
+				@item.Type
+			</td>
+			<td>
+				@item.Nutritions
+			</td>
+			<td>
+				@item.Image
+			</td>
+			<td>
+				<a class="btn btn-secondary" asp-controller="Recipe" asp-action="Edit" asp-route-id="@item.Id">Edit Recipe</a>
+				<a class="btn btn-danger" asp-controller="Recipe" asp-action="Delete" asp-route-id="@item.Id">Delete Recipe</a>
+			</td>
+		</tr>
+	}
+	</tbody>
+</table>

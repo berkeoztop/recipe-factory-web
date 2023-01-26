@@ -1,0 +1,57 @@
+﻿<html lang="tr">
+<body class="sb-nav-fixed">
+	<nav class="sb-topnav navbar navbar-expand " style="background-color: #dbe3ed;">
+		<!-- Navbar Search-->
+		<!-- Navbar-->
+	</nav>
+	<!--delete-->
+<div id="layoutSidenav">
+	<div id="layoutSidenav_nav">
+		<nav class="sb-sidenav sb-sidenav-dark" style="background-color: #dbe3ed;;color:black;">
+			<div class="sb-sidenav-menu ">
+				<div class="nav" style="color:black;">
+					<div class="sb-sidenav-menu-heading" style="color:black;">Menü</div>
+					<a class="nav-link" style="color:black;" asp-controller="Home" asp-action="Index">
+						<div class="sb-nav-link-icon"><i class="fas fa-home" style="color:black;"></i></div>
+						Ana Sayfa
+					</a>
+					<div class="sb-sidenav-menu-heading" style="color:black;">İçerik İşlemleri</div>
+					<a class="nav-link" style="color:black;" asp-controller="Admin" asp-action="MainCategories">
+						<div class="sb-nav-link-icon"><i class="fas fa-graduation-cap" style="color:black;"></i></div>
+						Tarifler
+					</a>
+					<a class="nav-link" style="color:black;" asp-controller="Announcement" asp-action="Announcements">
+						<div class="sb-nav-link-icon"><i class="fas fa-bell" style="color:black;"></i></div>
+						Kategoriler
+					</a>
+
+					<div class="sb-sidenav-menu-heading" style="color:black;">Kullanıcı İşlemleri</div>
+					<a class="nav-link" style="color:black;" asp-area="" asp-controller="Admin" asp-action="Roles">
+						<div class="sb-nav-link-icon"><i class="fas fa-user-shield" style="color:black;"></i></div>
+						Roller
+					</a>
+					<a class="nav-link" style="color:black;" asp-controller="Admin" asp-action="Users">
+						<div class="sb-nav-link-icon"><i class="fas fa-users" style="color:black;"></i></div>
+						Kullanıcılar
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div id="layoutSidenav_content">
+		<footer class="py-4 bg-light mt-auto">
+			<div class="container-fluid">
+				<div class="d-flex align-items-center justify-content-between small">
+					<div class="text-muted">Copyright &copy; </div>
+					<div>
+						<a asp-controller="Home" asp-action="Privacy">Gizlilik Sözleşmesi</a>
+						&middot;
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+
+</body>
+</html>

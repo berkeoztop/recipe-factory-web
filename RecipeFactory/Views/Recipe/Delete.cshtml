@@ -1,0 +1,54 @@
+﻿@model RecipeFactoryWeb.Models.Recipe
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data" asp-action="DeletePost">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2>Delete Recipe</h2>
+			<hr />
+		</div>
+
+		<input type="hidden" asp-for="Id" />
+
+		<div class="mb-3">
+			<label asp-for="Name"></label>
+			<input asp-for="Name" disabled class="form-control" />
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="Type"></label>
+			<input asp-for="Type" disabled class="form-control" />
+		</div>
+		
+		<div class="mb-3">
+			<label asp-for="Ingredients"></label>
+			<input asp-for="Ingredients" disabled class="form-control" />
+		</div>
+		
+		<div class="mb-3">
+			<label asp-for="Instructions"></label>
+			<input asp-for="Instructions" disabled class="form-control" />
+		</div>
+		
+		<div class="mb-3">
+			<label asp-for="Nutritions"></label>
+			<input asp-for="Nutritions" disabled class="form-control" />
+		</div>
+		
+		<div class="mb-3">
+			<label asp-for="Image"></label>
+			<input asp-for="Image" disabled class="form-control" />
+		</div>
+		
+		<button type="submit" class="btn">Delete</button>
+		<a asp-controller="Recipe" asp-action="Index" class="btn">Cancel</a>
+	</div>
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}
